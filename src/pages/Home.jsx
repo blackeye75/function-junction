@@ -5,7 +5,7 @@ import Banner from "../component/homePage/Banner";
 const Home = () => {
   return (
     <Container className="pt-[6vh] ">
-      <div className="test h-fit">
+      <div className="test ">
         <Banner/>
       </div>
     </Container>

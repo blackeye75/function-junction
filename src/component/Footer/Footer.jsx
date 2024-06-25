@@ -80,7 +80,7 @@ export default function App() {
       <div className="mx-6 py-10 md:flex justify-center text-center md:text-left">
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* <!-- TW Elements section --> */}
-          
+
           {/* <!-- Products section --> */}
           <div className="">
             <h6 className="mb-2 flex justify-center font-semibold uppercase md:justify-start">
