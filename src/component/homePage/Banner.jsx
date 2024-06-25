@@ -7,7 +7,7 @@ import cake from "../../assets/cake.png";
 const Banner = () => {
   return (
     <Container className="px-4 h-fit ">
-      <div className="main w-full h-full flex flex-col-reverse  md:flex-row">
+      <div className="main w-full h-screen flex flex-col-reverse  md:flex-row">
         <div className="left md:w-3/5 ">
           <div className="text flex flex-col md:leading-[7vw] pt-[2vw] md:pl-4 h-full">
             <div className="flex md:items-stretch items-center">
@@ -50,7 +50,7 @@ const Banner = () => {
               initial={{ y: 200, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, staggerChildren: 0.1 }}
-              className="mt-1 overflow-hidden z-10" 
+              className="mt-1 overflow-hidden z-10 " 
             >
               <Item />
             </motion.div>
