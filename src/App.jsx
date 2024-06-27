@@ -7,7 +7,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
   return (
-    <div className="min-h-screen flex flex-wrap " >
+    <div className="min-h-screen  flex flex-wrap " >
       <div className="w-full block ">
         <Headder />
         <main>

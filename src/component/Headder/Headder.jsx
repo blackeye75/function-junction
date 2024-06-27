@@ -41,10 +41,10 @@ const Headder = () => {
 
   return (
     <header className="">
-      <Container className="p-4" >
+      <Container className="p-4 ">
         {/* postion fixed stuck over overlapping component */}
         <nav
-          className={`bg-gray-800 sm:rounded-full absolute sm:h-[7vh] h-[6vh] top-3 w-[92vw] md:w-[97vw] ${
+          className={`bg-gray-800 sm:rounded-full absolute sm:h-[7vh] h-[6vh] top-3 w-[92vw] md:w-[97vw] z-50 ${
             isOpen ? "fixed w-[92vw] " : null
           } rounded-lg  top-0`}
         >
@@ -127,10 +127,10 @@ const Headder = () => {
           <div
             className={`${
               isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
-            } overflow-hidden transition-all bg-slate-900 z-30 duration-700 sm:hidden`}
+            } z-50 overflow-hidden transition-all bg-slate-900 duration-700 sm:hidden`}
             id="mobile-menu"
           >
-            <div className="p-2 pt-0  flex flex-col items-center">
+            <div className="p-2 pt-0 z-50 flex flex-col items-center">
               {navItems.map((item) =>
                 item.active ? (
                   <ul key={item.name}>
