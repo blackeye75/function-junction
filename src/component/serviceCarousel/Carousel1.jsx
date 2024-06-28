@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import CardCarousel1 from "../cardCarousel1/CardCarousel1";
 
 // Import Swiper styles
 import "swiper/css";
