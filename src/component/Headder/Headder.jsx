@@ -1,11 +1,14 @@
 import Container from "../container/Container";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
+import LogoutButton from "./LogoutBtn"
 
 const Headder = () => {
   const authStatus = useSelector((state) => state.auth.status);
   const [isOpen, setIsOpen] = useState(false);
+
+  const navigate=useNavigate();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -33,8 +36,13 @@ const Headder = () => {
       active: true,
     },
     {
-      name: "Login",
-      slug: "/login",
+      name: "Signin",
+      slug: "/signin",
+      active: !authStatus,
+    },
+    {
+      name: "Signup",
+      slug: "/signup",
       active: !authStatus,
     },
   ];
@@ -114,7 +122,7 @@ const Headder = () => {
                       )}
                       {authStatus && (
                         <li>
-                          <LogoutBtn />
+                          <LogoutButton />
                         </li>
                       )}
                     </ul>
@@ -151,7 +159,7 @@ const Headder = () => {
               {authStatus && (
                 <ul>
                   <li className="text-xl">
-                    <LogoutBtn />
+                    <LogoutButton />
                   </li>
                 </ul>
               )}
