@@ -97,11 +97,11 @@ const EyesAnimation = () => {
   }, []);
 
   return (
-    <div className="w-full px-20 pb-10 -mt-20 flex flex-col items-center justify-center bg-white text-black h-screen gap-20">
-      <h1 className="text-6xl font-['Bebas_Neue'] ">
+    <div className="w-full md:px-20 pb-10 md:-mt-20 -mt-0  flex flex-col items-center justify-center bg-white text-black md:h-screen h-fit  md:gap-20">
+      <h1 className="md:text-6xl text-[10vw] tracking-tight md:p-0 p-6 font-['Bebas_Neue'] ">
         Eyes on Your <span className="text-blue-500">Perfect Event!</span>
       </h1>
-      <div className='relative w-[70%] h-[70%] bg-cover bg-center rounded-xl bg-[url("https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg")]'>
+      <div className='relative md:w-[70%] md:h-[70%] w-[80%] h-[50vh] bg-cover bg-center rounded-xl bg-[url("https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg")]'>
         <div className="absolute flex top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-4">
           <div className="w-[12vw] h-[12vw] flex items-center justify-center rounded-full bg-zinc-100 ">
             <motion.div

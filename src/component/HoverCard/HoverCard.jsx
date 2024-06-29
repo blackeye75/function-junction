@@ -9,7 +9,7 @@ import {
 
 const Example = () => {
   return (
-    <div className=" w-full flex justify-center items-center  px-4 py-12 text-slate-900">
+    <div className=" md:w-full w-[90vw] p-3 md:p-0 flex justify-center items-center h-[60vh] md:h-[80vh]  md:px-4 md:py-12 text-slate-900">
       <TiltCard />
     </div>
   );
@@ -61,7 +61,8 @@ const TiltCard = () => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-[32vw] w-[22vw] rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative md:h-[30vw] md:w-[20vw] h-full w-full rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+
     >
       <div
         style={{
@@ -84,10 +85,14 @@ const TiltCard = () => {
         >
           HOVER ME
         </p> */}
-        <img
+        {/* <img
+          style={{
+            transform: "translateZ(45px)",
+          }}
           src="https://plus.unsplash.com/premium_photo-1663839412026-51a44cfadfb8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="" className="rounded-xl shadow-xl"
-        />
+          alt=""
+          className="rounded-xl shadow-xl w-full h-full"
+        /> */}
       </div>
     </motion.div>
   );

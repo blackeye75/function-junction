@@ -100,10 +100,10 @@ const Banner = () => {
           <EyesAnimation />
         </div>
       </Container>
-      <h1 className="text-5xl text-center ">
+      <h1 className=" md:-mt-20 mt-3 md:text-[5vw] text-[8vw] leading-none md:tracking-normal tracking-tight font-['Bebas_Neue'] text-blue-500 text-center ">
         "Epic Events. Unforgettable Moments. Let's Celebrate!"
       </h1>
-      <Container className="px-10 py-8 bg-white" >
+      <Container className="md:px-10 md:py-6 py-10 px-6  bg-white" data-scroll data-scroll-section data-scroll-speed="-.50" >
         <div className="rounded-xl overflow-hidden" data-scroll data-scroll-section data-scroll-speed=".30" >
           <Last />
         </div>

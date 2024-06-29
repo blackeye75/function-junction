@@ -37,24 +37,24 @@ const ParticleRing = () => {
       {/* <h1 className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-slate-200 font-medium text-2xl md:text-5xl pointer-events-none">
         Drag & Zoom
       </h1> */}
-      <section className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-slate-200 font-medium text-2xl md:text-5xl pointer-events-none h-screen w-full p-10">
-        <div className="container flex flex-col w-full gap-10  justify-between ">
+      <section className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-slate-200 font-medium text-2xl md:text-5xl pointer-events-none h-screen w-full md:p-10">
+        <div className="container flex flex-col w-full md:gap-10 gap-5  justify-between ">
           <motion.h2
             initial="hidden"
             whileInView="visible"
             variants={waveVariants}
-            className="text-[6vw] font-['Bebas_neue'] font-bold my-1 text-center"
+            className="md:text-[6vw] text-6xl md:p-0 pt-5 font-['Bebas_neue'] font-bold my-1 text-center"
           >
             Why Choose <span className="text-blue-500">Us?</span>
           </motion.h2>
-          <div className="flex flex-wrap justify-between gap-6">
-            <div className="flex items-center justify-center gap-10 text-center">
+          <div className="flex flex-wrap justify-between md:gap-6 gap-2">
+            <div className="flex md:items-center md:justify-center md:flex-row flex-col md:gap-10   text-center">
               <div className="w-full sm:w-1/2 p-5">
                 <motion.h3
                   initial="hidden"
                   whileInView="visible"
                   variants={waveVariants}
-                  className="text-7xl leading-none font-['Bebas_neue'] text-pink-500 font-semibold mb-4 "
+                  className="md:text-7xl  text-4xl md:leading-none font-['Bebas_neue'] text-pink-500 font-semibold mb-2 md:mb-4 "
                 >
                   Expert Team
                 </motion.h3>
@@ -62,7 +62,7 @@ const ParticleRing = () => {
                   initial="hidden"
                   whileInView="visible"
                   variants={waveVariants}
-                  className="text-xl leading-none uppercase font-semibold"
+                  className="md:text-xl md:leading-none text-lg leading-5 uppercase font-semibold"
                 >
                   Our team consists of highly experienced professionals who are
                   experts in their respective fields. We work collaboratively to
@@ -74,7 +74,7 @@ const ParticleRing = () => {
                   initial="hidden"
                   whileInView="visible"
                   variants={waveVariants}
-                  className="text-6xl leading-none font-['Bebas_neue'] text-pink-500 font-semibold mb-4"
+                  className="md:text-7xl text-4xl tracking-tight md:leading-none font-['Bebas_neue'] text-pink-500 font-semibold mb-2 md:mb-4 "
                 >
                   Personalized Service
                 </motion.h3>
@@ -82,7 +82,7 @@ const ParticleRing = () => {
                   initial="hidden"
                   whileInView="visible"
                   variants={waveVariants}
-                  className="text-xl leading-none uppercase font-semibold"
+                  className="md:text-xl md:leading-none text-lg leading-5 uppercase font-semibold"
                 >
                   We understand that every event is unique. That's why we offer
                   personalized services tailored to meet your specific needs and
@@ -95,7 +95,7 @@ const ParticleRing = () => {
                 initial="hidden"
                 whileInView="visible"
                 variants={waveVariants}
-                className="text-6xl leading-none font-['Bebas_neue'] text-pink-500 font-semibold mb-4"
+                className="md:text-7xl text-4xl md:leading-none font-['Bebas_neue'] text-pink-500 font-semibold mb-2 md:mb-4 "
               >
                 Attention to Detail
               </motion.h3>
@@ -103,7 +103,7 @@ const ParticleRing = () => {
                 initial="hidden"
                 whileInView="visible"
                 variants={waveVariants}
-                className="text-xl leading-none uppercase font-semibold"
+                className="md:text-xl md:leading-none text-lg leading-5 uppercase font-semibold"
               >
                 We pride ourselves on our meticulous attention to detail,
                 ensuring that every aspect of your event is executed flawlessly.
