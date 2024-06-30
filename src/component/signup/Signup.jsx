@@ -25,10 +25,15 @@ const Signup = () => {
 
   const create = async (data) => {
     seterror("");
+    // console.log(data);
     try {
       const userData = await authService.createAccount(data);
       if (userData) {
         const userData = await authService.getCurrentUser();
+
+        // await authService.updateUser( userData.$id,  data );
+        await authService.updateUser({ userId: userData.$id,  data });
+
         if (userData) dispatch(login(userData));
         navigate("/");
       }
@@ -123,7 +128,7 @@ const Signup = () => {
               </label>
               <input
                 className="w-full text-black px-3 py-2 outline-none border rounded"
-                type="number"
+                type="text"
                 placeholder="Enter Your Phone Number"
                 id="phone"
                 name="phone"

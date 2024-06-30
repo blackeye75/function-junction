@@ -27,7 +27,7 @@ const Headder = () => {
     },
     {
       name: "About",
-      slug: "/add-post",
+      slug: "/about",
       active: true,
     },
     {
@@ -38,11 +38,6 @@ const Headder = () => {
     {
       name: "Signin",
       slug: "/signin",
-      active: !authStatus,
-    },
-    {
-      name: "Signup",
-      slug: "/signup",
       active: !authStatus,
     },
   ];

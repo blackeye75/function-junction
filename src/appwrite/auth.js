@@ -19,12 +19,12 @@ export class AuthService {
         ID.unique(),
         email,
         password,
-        name,
-        phone
+        name
+        // phone
       );
 
       if (userAccount) {
-        return this.login({email, password});
+        return this.login({ email, password });
       } else {
         return userAccount;
       }
@@ -37,7 +37,7 @@ export class AuthService {
     try {
       return await this.account.createEmailPasswordSession(email, password);
     } catch (error) {
-      console.log("AppwriteService :: login :: error ::", error);
+      throw error("AppwriteService :: login :: error ::", error);
     }
   }
 
@@ -45,9 +45,21 @@ export class AuthService {
     try {
       return await this.account.get();
     } catch (error) {
-      console.log("AppwriteService :: getCurrentUSer :: error ::", error);
+      console.log("AppwriteService :: getCurrentUser :: error ::", error);
     }
     return null;
+  }
+
+  async updateUser( userId, data ) {
+    try {
+      // return await this.account.updatePrefs(userId, { data });
+      const result = await this.account.updatePrefs(userId, {
+        preferences: { data },
+      });
+      return result;
+    } catch (error) {
+      console.log("AppwriteService :: updateUser :: error ::", error);
+    }
   }
 
   async logout() {
