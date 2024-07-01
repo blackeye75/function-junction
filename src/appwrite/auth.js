@@ -29,7 +29,7 @@ export class AuthService {
         return userAccount;
       }
     } catch (error) {
-      throw error("AppwriteService :: createAccount :: error ::", error);
+      throw error;
     }
   }
 
@@ -37,7 +37,7 @@ export class AuthService {
     try {
       return await this.account.createEmailPasswordSession(email, password);
     } catch (error) {
-      throw error("AppwriteService :: login :: error ::", error);
+      throw error;
     }
   }
 
