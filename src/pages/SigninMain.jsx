@@ -4,7 +4,7 @@ import Signin from '../component/signin/Signin'
 
 const SigninMain = () => {
   return (
-    <Container>
+    <Container className='contain_signup' >
         <Signin/>
     </Container>
   )

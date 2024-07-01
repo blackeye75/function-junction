@@ -51,10 +51,10 @@ const Signup = () => {
   };
 
   return (
-    <Container className="min-h-screen w-full  ">
-      <div className="min-h-screen  flex items-center justify-center bg-zinc-900">
+    <Container className="min-h-screen  p-4 ">
+      <div className="md:min-h-screen h-fit md:pt-0 pt-[15vh]   flex items-center justify-center bg-zinc-900">
         <motion.div
-          className="bg-white p-8 rounded shadow-md w-full max-w-md"
+          className="bg-white md:p-8 p-4 rounded shadow-md w-full max-w-md"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
