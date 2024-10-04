@@ -50,7 +50,7 @@ export class AuthService {
     return null;
   }
 
-  async updateUser( userId, data ) {
+  async updateUser(userId, data) {
     try {
       // return await this.account.updatePrefs(userId, { data });
       const result = await this.account.updatePrefs(userId, {
@@ -67,6 +67,34 @@ export class AuthService {
       await this.account.deleteSessions();
     } catch (error) {
       console.log("AppwriteService :: logout :: error ::", error);
+    }
+  }
+  // New Forgot Password Method
+  async forgotPassword(email) {
+    try {
+      // Pass your reset URL here
+      const resetUrl = `${conf.appUrl}/reset-password`;
+      await this.account.createRecovery(email, resetUrl);
+      console.log("Password reset link sent successfully.");
+    } catch (error) {
+      console.log("AppwriteService :: forgotPassword :: error ::", error);
+      throw error;
+    }
+  }
+
+  // New Reset Password Method
+  async resetPassword(userId, secret, newPassword) {
+    try {
+      await this.account.updateRecovery(
+        userId,
+        secret,
+        newPassword,
+        newPassword
+      );
+      console.log("Password reset successfully.");
+    } catch (error) {
+      console.log("AppwriteService :: resetPassword :: error ::", error);
+      throw error;
     }
   }
 }

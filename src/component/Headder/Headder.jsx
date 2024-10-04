@@ -47,15 +47,15 @@ const Headder = () => {
       <Container className="p-4 ">
         {/* postion fixed stuck over overlapping component */}
         <nav
-          className={`bg-gray-800 sm:rounded-full absolute sm:h-[7vh] h-[6vh] top-3 w-[92vw] md:w-[97vw] z-50 ${
+          className={`bg-zinc-800 sm:rounded-full absolute sm:flex sm:items-center justify-between sm:h-[8vh] h-[6vh] top-3 w-[92vw] md:w-[97vw] z-50 ${
             isOpen ? "fixed w-[92vw] " : null
           } rounded-lg  top-0`}
         >
-          <div className=" mx-auto px-2 sm:px-6 lg:px-8">
-            <div className=" flex items-center justify-between ">
-              <div className=" inset-y-0 left-0 flex items-center sm:hidden"></div>
-              <div className=" flex items-center justify-center w-full  sm:items-stretch  sm:justify-between h-[6vh] ">
-                <div className="flex items-center justify-between w-full ">
+          <div className="five  flex items-center justify-between px-2 w-full sm:px-6 lg:px-8">
+            <div className="four flex items-center w-full  justify-between ">
+              <div className="three inset-y-0 left-0 flex items-center sm:hidden"></div>
+              <div className="two flex items-center justify-between w-full  sm:items-stretch  sm:justify-between h-[6vh] ">
+                <div className="one flex items-center justify-between w-full ">
                   <Link to="/" className="text-white text-xl ">
                     LOgo
                   </Link>
@@ -107,7 +107,7 @@ const Headder = () => {
                         item.active ? (
                           <li key={item.name}>
                             <button
-                              className="inline-block px-3 py-2 duration-200 hover:bg-blue-100 rounded-full"
+                              className="inline-block px-3 py-2 duration-200  rounded-full font-['Varela_Round'] text-lg"
                               onClick={() => navigate(item.slug)}
                             >
                               {item.name}

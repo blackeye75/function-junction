@@ -7,6 +7,7 @@ import { login as authLogin } from "../../store/authSlice";
 import { useDispatch } from "react-redux";
 import authService from "../../appwrite/auth";
 import { useForm } from "react-hook-form";
+import ForgotPassword from "./ForgotPassword";
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -142,6 +143,7 @@ const Signin = () => {
               Sign up
             </Link>
           </motion.p>
+      
         </motion.div>
       </div>
     </Container>
