@@ -143,7 +143,19 @@ const Signin = () => {
               Sign up
             </Link>
           </motion.p>
-      
+          <motion.p
+            className="text-center text-gray-600 mt-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1.2 }}
+          >
+            <Link
+              to="/forgot-password"
+              className="text-blue-500 hover:underline"
+            >
+              Forgot Password?
+            </Link>
+          </motion.p>
         </motion.div>
       </div>
     </Container>

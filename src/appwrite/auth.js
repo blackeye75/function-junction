@@ -70,31 +70,57 @@ export class AuthService {
     }
   }
   // New Forgot Password Method
+  // async forgotPassword(email) {
+  //   try {
+  //     // Pass your reset URL here
+  //     const resetUrl = `${conf.appUrl}/reset-password`;
+  //     await this.account.createRecovery(email, resetUrl);
+  //     console.log("Password reset link sent successfully.");
+  //   } catch (error) {
+  //     console.log("AppwriteService :: forgotPassword :: error ::", error);
+  //     throw error;
+  //   }
+  // }
+
+  // Add this method in your authService
   async forgotPassword(email) {
     try {
-      // Pass your reset URL here
-      const resetUrl = `${conf.appUrl}/reset-password`;
-      await this.account.createRecovery(email, resetUrl);
-      console.log("Password reset link sent successfully.");
+      return await this.account.createRecovery(
+        email,
+        `${window.location.origin}/reset-password`
+      );
     } catch (error) {
-      console.log("AppwriteService :: forgotPassword :: error ::", error);
-      throw error;
+      throw error; // Re-throw error to handle in component
     }
   }
 
   // New Reset Password Method
+  // async resetPassword(userId, secret, newPassword) {
+  //   try {
+  //     await this.account.updateRecovery(
+  //       userId,
+  //       secret,
+  //       newPassword,
+  //       newPassword
+  //     );
+  //     console.log("Password reset successfully.");
+  //   } catch (error) {
+  //     console.log("AppwriteService :: resetPassword :: error ::", error);
+  //     throw error;
+  //   }
+  // }
+
+  // Add this method in your authService
   async resetPassword(userId, secret, newPassword) {
     try {
-      await this.account.updateRecovery(
+      return await this.account.updateRecovery(
         userId,
         secret,
         newPassword,
         newPassword
       );
-      console.log("Password reset successfully.");
     } catch (error) {
-      console.log("AppwriteService :: resetPassword :: error ::", error);
-      throw error;
+      throw error; // Re-throw error to handle in component
     }
   }
 }

@@ -8,6 +8,8 @@ import store from "./store/store.js";
 import Home from "./pages/Home.jsx";
 import SignupMain from "./pages/SignupMain.jsx";
 import SigninMain from "./pages/SigninMain.jsx";
+import ForgotPassword from "./component/signin/ForgotPassword.jsx";
+import ResetPassword from "./component/signin/ResetPassword.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,13 +21,21 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path:"/signup",
-        element:<SignupMain/>
+        path: "/signup",
+        element: <SignupMain />,
       },
       {
-        path:"/signin",
-        element:<SigninMain/>
-      }
+        path: "/signin",
+        element: <SigninMain />,
+      },
+      {
+        path: "/forgot-password",
+        element: <ForgotPassword />,
+      },
+      {
+        path: "/reset-password",
+        element: <ResetPassword />,
+      }      
     ],
   },
 ]);
