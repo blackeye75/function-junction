@@ -10,6 +10,7 @@ import SignupMain from "./pages/SignupMain.jsx";
 import SigninMain from "./pages/SigninMain.jsx";
 import ForgotPassword from "./component/signin/ForgotPassword.jsx";
 import ResetPassword from "./component/signin/ResetPassword.jsx";
+import Aboutpage from "./pages/Aboutpage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/reset-password",
         element: <ResetPassword />,
-      }      
+      } ,{
+        path:"/about",
+        element:<Aboutpage/>
+      }     
     ],
   },
 ]);

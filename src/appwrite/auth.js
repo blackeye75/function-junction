@@ -19,8 +19,8 @@ export class AuthService {
         ID.unique(),
         email,
         password,
-        name
-        // phone
+        name,
+        phone
       );
 
       if (userAccount) {
