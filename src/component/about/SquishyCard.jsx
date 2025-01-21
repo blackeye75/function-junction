@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import CardGradient from "./CardGradient";
 
 const SquishyCard = ({det}) => {
     // console.log(det);
@@ -27,7 +28,7 @@ const Card = ({det}) => {
           scale: 1.05,
         },
       }}
-      className="relative h-96 w-80 shrink-0 overflow-hidden rounded-xl bg-indigo-500 p-8"
+      className={`relative h-96 w-80 shrink-0 overflow-hidden rounded-xl ${det.color} p-8`}
     >
       <div className="relative z-10 text-white">
         <span className="mb-3 block w-fit rounded-full bg-white/30 px-3 py-0.5 text-sm font-light text-white">
