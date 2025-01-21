@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import CardGradient from "./CardGradient";
 
 const SquishyCard = ({det}) => {
     // console.log(det);

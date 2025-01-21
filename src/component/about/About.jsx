@@ -27,9 +27,9 @@ const About = () => {
             </div>
             <img src={"./parallax1.png"} className='w-32 h-42 absolute -z-50' alt="" />
             <h1 className='text-4xl font-["Varela_Round"] text-center mt-6' >Our services cater to a variety of occasions, <span className='text-blue-500' >including</span>:</h1>
-            <div className='flex justify-center items-center w-full h-[] gap-8 sm:flex-row pt-5 flex-wrap sm:flex-nowrap' >
+            <div className='check1 flex justify-center items-center w-full h-fit  sm:gap-8 gap-5 sm:flex-row pt-5 flex-col-reverse ' >
                 {
-                    aboutDets.map((det) => { return <div className=' w-1/4 h-fit ' >  <SquishyCard det={det} key={det.id} /> </div> })
+                    aboutDets.map((det) => { return <div className=' sm:w-1/4 flex items-center ' >  <SquishyCard det={det} key={det.id} /> </div> })
                 }
             </div>
 
