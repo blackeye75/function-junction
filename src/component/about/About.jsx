@@ -9,32 +9,32 @@ const aboutDets = [{ id: 1, title: "Corporate Events", description: "From formal
 const About = () => {
 
 
-    return (
-        <div className='w-full h-fit px-3 z-0' >
-            <h1 className='text-center text-5xl font-light text-white font-["Varela_Round"]' > About <span className='text-blue-500' >Us</span></h1>
+  return (
+    <div className='w-full h-fit px-3 z-0' >
+      <h1 className='text-center text-5xl font-light text-white font-["Varela_Round"]' > About <span className='text-blue-500' >Us</span></h1>
 
-            <div className="relative">
-                <div
-                    className="absolute -inset-2 rounded-lg bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-violet-600 via-fuchsia-600 to-violet-600 opacity-50 blur-2xl"
-                ></div>
-                <div className="relative flex w-full h-72 sm:h-fit sm:p-4 items-center justify-center border border-zinc-700 rounded-lg bg-zinc-900 px-2 backdrop-blur-2xl text-slate-300">
-                    <div className='   h-full w-full  rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 '>
-                        <h1 className='text-lg tracking-tight mt-4 leading-[1.5rem] text-center  font-["Space_Grotesk"]' >Welcome to Function Junction, your one-stop solution for all your event planning and management needs!
-                            We are a fresh and dynamic startup with a passion for creating memorable experiences. At Function junction, we take pride in handling every detail of your event, allowing you to sit back, relax, and enjoy the moments that truly matter. From start to finish, we ensure everything is seamlessly managed, so you don't have to lift a finger.
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <img src={"./parallax1.png"} className='w-32 h-42 absolute -z-50' alt="" />
-            <h1 className='text-4xl font-["Varela_Round"] text-center mt-6' >Our services cater to a variety of occasions, <span className='text-blue-500' >including</span>:</h1>
-            <div className='check1 flex justify-center items-center w-full h-fit  sm:gap-8 gap-5 sm:flex-row pt-5 flex-col-reverse ' >
-                {
-                    aboutDets.map((det) => { return <div className=' sm:w-1/4 flex items-center ' >  <SquishyCard det={det} key={det.id} /> </div> })
-                }
-            </div>
-
+      <div className="relative">
+        <div
+          className="absolute -inset-2 rounded-lg bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-violet-600 via-fuchsia-600 to-violet-600 opacity-50 blur-2xl"
+        ></div>
+        <div className="relative flex w-full h-72 sm:h-fit sm:p-4 items-center justify-center border border-zinc-700 rounded-lg bg-zinc-900 px-2 backdrop-blur-2xl text-slate-300">
+          <div className='   h-full w-full  rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 '>
+            <h1 className='text-lg tracking-tight mt-4 leading-[1.5rem] text-center  font-["Space_Grotesk"]' >Welcome to Function Junction, your one-stop solution for all your event planning and management needs!
+              We are a fresh and dynamic startup with a passion for creating memorable experiences. At Function junction, we take pride in handling every detail of your event, allowing you to sit back, relax, and enjoy the moments that truly matter. From start to finish, we ensure everything is seamlessly managed, so you don't have to lift a finger.
+            </h1>
+          </div>
         </div>
-    )
+      </div>
+      <img src={"./parallax1.png"} className='w-32 h-42 absolute -z-50' alt="" />
+      <h1 className='text-4xl font-["Varela_Round"] text-center mt-6' >Our services cater to a variety of occasions, <span className='text-blue-500' >including</span>:</h1>
+      <div className='check1 flex justify-center items-center w-full h-fit  sm:gap-8 gap-5 sm:flex-row pt-5 flex-col-reverse ' >
+        {
+          aboutDets.map((det) => { return <div className=' sm:w-1/4 flex items-center ' >  <SquishyCard det={det} key={det.id} /> </div> })
+        }
+      </div>
+
+    </div>
+  )
 }
 
 export default About
