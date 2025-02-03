@@ -11,6 +11,9 @@ import SigninMain from "./pages/SigninMain.jsx";
 import ForgotPassword from "./component/signin/ForgotPassword.jsx";
 import ResetPassword from "./component/signin/ResetPassword.jsx";
 import Aboutpage from "./pages/Aboutpage.jsx";
+import Decorpage from "./pages/Decorpage.jsx";
+import WeddingPage from "./pages/WeddingPage.jsx";
+import Servicespage from "./pages/Servicespage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +43,17 @@ const router = createBrowserRouter([
         path:"/about",
         element:<Aboutpage/>
       }     
+       ,{
+        path:"/decor",
+        element:<Decorpage/>
+      }     
+       ,{
+        path:"/wedding",
+        element:<WeddingPage/>
+      } ,{
+        path:"/services",
+        element:<Servicespage/>
+      }   
     ],
   },
 ]);

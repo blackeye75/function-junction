@@ -7,6 +7,7 @@ import TabPanel from "@mui/lab/TabPanel";
 import wedding from "../../assets/wedding.png";
 import services from "../../assets/services.png";
 import decor from "../../assets/decor.png";
+import { Link } from "react-router-dom";
 
 export default function LabTabs() {
   const [value, setValue] = React.useState("1");
@@ -46,6 +47,8 @@ export default function LabTabs() {
               believe every event is unique. Our dedicated team works closely
               with you to tailor our services to your specific needs and
               preferences, ensuring a personalized and unforgettable experience
+              <br />
+              <Link to="/decor" className="text-blue-500 px-3 py-1 pl-1 mt-1 font-medium inline-block rounded-md bg-white" >More From Us</Link>
             </h1>
             <div className="md:w-1/5 flex justify-center md:justify-start w-full">
               <img
@@ -66,6 +69,8 @@ export default function LabTabs() {
               ensure your event runs smoothly from start to finish. Our
               experienced coordinators manage all aspects of the event, allowing
               you to enjoy every moment stress-free.
+              <br />
+              <Link to="/wedding" className="text-blue-500 px-3 py-1 pl-1 mt-1 font-medium inline-block rounded-md bg-white" >More From Us</Link>
             </h1>
             <div className="md:w-1/5 flex justify-center md:justify-start w-full">
               <img
@@ -83,6 +88,8 @@ export default function LabTabs() {
               occasion, our team provides a full range of services including
               catering, photography, entertainment, and more. We take care of
               all the details to ensure your event is a success.
+              <br />
+              <Link to="/services" className="text-blue-500 px-3 py-1 pl-1 mt-1 font-medium inline-block rounded-md bg-white" >More From Us</Link>
             </h1>
             <div className="md:w-1/5 flex justify-center md:justify-start w-full">
               <img
