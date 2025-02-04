@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa";
 
-const HoverCard = () => {
+const HoverCard = ({ heading, paragraph, image, height, width }) => {
   return (
     <motion.div
-      className="relative w-80 h-96 overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+      className={`relative overflow-hidden rounded-2xl shadow-lg cursor-pointer`}
       whileHover="hover"
       initial="initial"
+      style={{ height: height, width: width }}
     >
       {/* Background Wrapper */}
       <motion.div
@@ -19,24 +21,36 @@ const HoverCard = () => {
         {/* Background Image */}
         <div
           className="w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1461784180009-21121b2f204c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
+          style={{ backgroundImage: `url(${image})` }}
         />
       </motion.div>
 
+      {/* Rotating Arrow at Top Right */}
+      <motion.div
+        className="absolute top-4 right-4 text-white text-2xl"
+        variants={{
+          hover: { rotate: 90 }, // Rotates 90° on hover
+          initial: { rotate: 0 },
+        }}
+        transition={{ duration: 0.3 }}
+      >
+        <FaArrowRight />
+      </motion.div>
+
       {/* Content Overlay */}
-      <div className="absolute inset-0 flex flex-col justify-end bg-black bg-opacity-50 p-6">
+      <div className="absolute inset-0 flex flex-col justify-end bg-black bg-opacity-50 p-6 sm:p-4 md:p-6">
         <motion.h2
-          className="text-white text-2xl font-bold"
+          className="text-white text-2xl font-bold sm:text-xl md:text-2xl"
           variants={{
             hover: { rotate: 5, y: -5 },
             initial: { rotate: 0, y: 0 },
           }}
           transition={{ duration: 0.3 }}
         >
-          Hover Card
+          {heading}
         </motion.h2>
-        <p className="text-gray-300 text-sm">
-          This is an animated card using Framer Motion.
+        <p className="text-gray-300 text-sm sm:text-xs md:text-sm">
+          {paragraph}
         </p>
       </div>
     </motion.div>
