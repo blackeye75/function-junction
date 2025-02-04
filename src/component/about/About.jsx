@@ -11,7 +11,7 @@ const About = () => {
 
   return (
     <div className='w-full h-fit px-3 z-0' >
-      <h1 className='text-center text-5xl font-light text-white font-["Varela_Round"]' > About <span className='text-blue-500' >Us</span></h1>
+      {/* <h1 className='text-center text-5xl font-light text-white font-["Varela_Round"]' > About <span className='text-blue-500' >Us</span></h1> */}
 
       <div className="relative">
         <div
