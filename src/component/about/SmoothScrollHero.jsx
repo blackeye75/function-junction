@@ -101,34 +101,48 @@ const CenterImage = () => {
 
 const ParallaxImages = () => {
   return (
-    <div className="mx-auto max-w-5xl px-0 pt-[0px] bg-white">
+    <div className="mx-auto max-w-5xl px-10 pt-[200px]  space-y-3 ">
       <ParallaxImg
         src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="And example of a space launch"
-        start={0}
-        end={0}
-        className="w-1/3 rounded-lg"
+        start={-200}
+        end={200}
+        className="w-1/4 mx-auto rounded-lg"
       />
       <ParallaxImg
         src="https://images.unsplash.com/photo-1509666537727-9154b6962292?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="An example of a space launch"
-        start={0}
-        end={0}
-        className=" w-1/3 rounded-lg"
+        start={-200}
+        end={200}
+        className=" w-2/6 mx-1 rounded-lg"
       />
       <ParallaxImg
         src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Orbiting satellite"
-        start={0}
-        end={0}
-        className=" w-1/3 rounded-lg"
+        start={200}
+        end={-250}
+        className=" w-2/5 ml-52 rounded-lg"
+      />
+      <ParallaxImg
+        src="https://images.unsplash.com/photo-1478145787956-f6f12c59624d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Orbiting satellite"
+        start={-200}
+        end={100}
+        className=" w-2/6 mx-[30vw] rounded-lg"
+      />
+      <ParallaxImg
+        src="https://images.unsplash.com/photo-1516600164266-f3b8166ae679?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Orbiting satellite"
+        start={-200}
+        end={200}
+        className=" w-1/5 ml-36 rounded-lg"
       />
       <ParallaxImg
         src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3DD"
         alt="Orbiting satellite"
-        start={0}
-        end={0}
-        className=" w-1/3 rounded-lg"
+        start={200}
+        end={-250}
+        className=" w-2/5 ml-auto rounded-lg"
       />
     </div>
   );
